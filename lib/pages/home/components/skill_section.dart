@@ -8,23 +8,51 @@ import 'package:web_portfolio/utils/screen_helper.dart';
 List<Skill> skills = [
   Skill(
     skill: "Dart",
-    percentage: 62,
+    percentage: 65,
+  ),
+  Skill(
+    skill: "Flutter",
+    percentage: 70,
   ),
   Skill(
     skill: "Javascript",
-    percentage: 80,
+    percentage: 50,
   ),
   Skill(
-    skill: "PHP",
-    percentage: 78,
+    skill: "VueJS",
+    percentage: 58,
+  ),
+  Skill(
+    skill: "NuxtJS",
+    percentage: 67,
+  ),
+  Skill(
+    skill: "Vuetify",
+    percentage: 73,
   ),
   Skill(
     skill: "Python",
+    percentage: 91,
+  ),
+  Skill(
+    skill: "Django",
+    percentage: 83,
+  ),
+  Skill(
+    skill: "FastAPI",
+    percentage: 76,
+  ),
+  Skill(
+    skill: "Ruby",
     percentage: 90,
   ),
   Skill(
-    skill: "GoLang",
-    percentage: 40,
+    skill: "Ruby On Rails",
+    percentage: 82,
+  ),
+  Skill(
+    skill: "Jekyll",
+    percentage: 93,
   ),
 ];
 
@@ -55,7 +83,7 @@ class SkillSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/person_small.png",
+                    "assets/person.png",
                     width: 300.0,
                   ),
                 ),
@@ -81,7 +109,7 @@ class SkillSection extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        "This is all the skills listed below more will be added in due time. This is all the skills listed below more will be added in due time.",
+                        "All Technologie I use Every often",
                         style: TextStyle(
                           color: kCaptionColor,
                           height: 1.5,
