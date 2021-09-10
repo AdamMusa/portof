@@ -99,7 +99,7 @@ class SkillSection extends StatelessWidget {
                       Text(
                         "SKILLS",
                         style: GoogleFonts.oswald(
-                          color: Colors.white,
+                          color: Colors.grey,
                           fontWeight: FontWeight.w900,
                           fontSize: 28.0,
                           height: 1.3,
@@ -132,8 +132,10 @@ class SkillSection extends StatelessWidget {
                                         padding: EdgeInsets.only(left: 10.0),
                                         alignment: Alignment.centerLeft,
                                         height: 38.0,
-                                        child: Text(skill.skill),
-                                        color: Colors.white,
+                                        child: Text(skill.skill,
+                                            style:
+                                                TextStyle(color: Colors.white)),
+                                        color: Colors.black54,
                                       ),
                                     ),
                                     SizedBox(
@@ -143,7 +145,7 @@ class SkillSection extends StatelessWidget {
                                       // remaining (blank part)
                                       flex: 100 - skill.percentage,
                                       child: Divider(
-                                        color: Colors.white,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                     SizedBox(
@@ -152,7 +154,7 @@ class SkillSection extends StatelessWidget {
                                     Text(
                                       "${skill.percentage}%",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: Colors.black54,
                                         fontSize: 16.0,
                                       ),
                                     )

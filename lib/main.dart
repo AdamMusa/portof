@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Flutter Portfolio",
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       darkTheme: Theme.of(context).copyWith(
         platform: TargetPlatform.android,
         scaffoldBackgroundColor: kBackgroundColor,

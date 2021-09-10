@@ -27,7 +27,7 @@ List<CarouselItemModel> carouselItems = List.generate(
           Text(
             "Adam Musa Ali",
             style: GoogleFonts.oswald(
-              color: Colors.white,
+              color: Colors.grey,
               fontSize: 40.0,
               fontWeight: FontWeight.w900,
               height: 1.3,
@@ -106,6 +106,7 @@ List<CarouselItemModel> carouselItems = List.generate(
       ),
     ),
     image: Container(
+      height: 500,
       child: Image.asset(
         "assets/person.png",
         fit: BoxFit.contain,
