@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
 import 'package:porto/models/skill.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/screen_helper.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 
 List<Skill> skills = [
@@ -57,14 +59,14 @@ List<Skill> skills = [
 ];
 
 class SkillSection extends StatelessWidget {
+  const SkillSection({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScreenHelper(
-        desktop: _buildUi(kDesktopMaxWidth),
-        tablet: _buildUi(kTabletMaxWidth),
-        mobile: _buildUi(getMobileMaxWidth(context)),
-      ),
+    return ScreenHelper(
+      desktop: _buildUi(kDesktopMaxWidth),
+      tablet: _buildUi(kTabletMaxWidth),
+      mobile: _buildUi(getMobileMaxWidth(context)),
     );
   }
 
@@ -87,7 +89,7 @@ class SkillSection extends StatelessWidget {
                     width: 300.0,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50.0,
                 ),
                 Expanded(
@@ -105,10 +107,10 @@ class SkillSection extends StatelessWidget {
                           height: 1.3,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10.0,
                       ),
-                      Text(
+                      const Text(
                         "All Technologie I use Every often",
                         style: TextStyle(
                           color: kCaptionColor,
@@ -116,44 +118,45 @@ class SkillSection extends StatelessWidget {
                           fontSize: 16.0,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15.0,
                       ),
                       Column(
                         children: skills
                             .map(
                               (skill) => Container(
-                                margin: EdgeInsets.only(bottom: 15.0),
+                                margin: const EdgeInsets.only(bottom: 15.0),
                                 child: Row(
                                   children: [
                                     Expanded(
                                       flex: skill.percentage,
                                       child: Container(
-                                        padding: EdgeInsets.only(left: 10.0),
+                                        padding:
+                                            const EdgeInsets.only(left: 10.0),
                                         alignment: Alignment.centerLeft,
                                         height: 38.0,
                                         child: Text(skill.skill,
-                                            style:
-                                                TextStyle(color: Colors.white)),
+                                            style: const TextStyle(
+                                                color: Colors.white)),
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10.0,
                                     ),
                                     Expanded(
                                       // remaining (blank part)
                                       flex: 100 - skill.percentage,
-                                      child: Divider(
+                                      child: const Divider(
                                         color: Colors.black54,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10.0,
                                     ),
                                     Text(
                                       "${skill.percentage}%",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.black54,
                                         fontSize: 16.0,
                                       ),

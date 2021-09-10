@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_icons/flutter_icons.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
 import 'package:porto/models/header_item.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/globals.dart';
 import 'package:porto/utils/screen_helper.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 
 List<HeaderItem> headerItems = [
@@ -26,34 +29,34 @@ List<HeaderItem> headerItems = [
 ];
 
 class HeaderLogo extends StatelessWidget {
+  const HeaderLogo({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: MouseRegion(
-        cursor: SystemMouseCursors.click,
-        child: GestureDetector(
-          onTap: () {},
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "AMA",
-                  style: GoogleFonts.oswald(
-                    color: Colors.white,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {},
+        child: RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: "AMA",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                TextSpan(
-                  text: ".",
-                  style: GoogleFonts.oswald(
-                    color: kPrimaryColor,
-                    fontSize: 36.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
-            ),
+              ),
+              TextSpan(
+                text: ".",
+                style: GoogleFonts.oswald(
+                  color: kPrimaryColor,
+                  fontSize: 36.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
           ),
         ),
       ),
@@ -62,12 +65,15 @@ class HeaderLogo extends StatelessWidget {
 }
 
 class HeaderRow extends StatelessWidget {
+  const HeaderRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveVisibility(
       visible: false,
+      // ignore: prefer_const_literals_to_create_immutables
       visibleWhen: [
-        Condition.largerThan(name: MOBILE),
+        const Condition.largerThan(name: MOBILE),
       ],
       child: Row(
         children: headerItems
@@ -80,13 +86,13 @@ class HeaderRow extends StatelessWidget {
                           color: kDangerColor,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                             horizontal: 20.0, vertical: 5.0),
                         child: TextButton(
                           onPressed: item.onTap,
                           child: Text(
                             item.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
                               fontWeight: FontWeight.bold,
@@ -98,12 +104,12 @@ class HeaderRow extends StatelessWidget {
                   : MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: Container(
-                        margin: EdgeInsets.only(right: 30.0),
+                        margin: const EdgeInsets.only(right: 30.0),
                         child: GestureDetector(
                           onTap: item.onTap,
                           child: Text(
                             item.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
                               fontWeight: FontWeight.bold,
@@ -120,18 +126,18 @@ class HeaderRow extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
+  const Header({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScreenHelper(
-        desktop: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: buildHeader(),
-        ),
-        // We will make this in a bit
-        mobile: buildMobileHeader(),
-        tablet: buildHeader(),
+    return ScreenHelper(
+      desktop: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: buildHeader(),
       ),
+      // We will make this in a bit
+      mobile: buildMobileHeader(),
+      tablet: buildHeader(),
     );
   }
 
@@ -139,11 +145,11 @@ class Header extends StatelessWidget {
   Widget buildMobileHeader() {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            HeaderLogo(),
+            const HeaderLogo(),
             // Restart server to make icons work
             // Lets make a scaffold key and create a drawer
             GestureDetector(
@@ -151,7 +157,7 @@ class Header extends StatelessWidget {
                 // Lets open drawer using global key
                 Globals.scaffoldKey.currentState!.openEndDrawer();
               },
-              child: Icon(
+              child: const Icon(
                 FlutterIcons.menu_fea,
                 color: Colors.white,
                 size: 28.0,
@@ -166,12 +172,13 @@ class Header extends StatelessWidget {
   // Lets plan for mobile and smaller width screens
   Widget buildHeader() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // ignore: prefer_const_literals_to_create_immutables
         children: [
-          HeaderLogo(),
-          HeaderRow(),
+          const HeaderLogo(),
+          const HeaderRow(),
         ],
       ),
     );

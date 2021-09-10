@@ -1,17 +1,21 @@
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:porto/pages/home/components/carousel_items.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/screen_helper.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 
 class Carousel extends StatelessWidget {
   final CarouselController carouselController = CarouselController();
+
+  Carousel({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    return Container(
+    return SizedBox(
       height: carouselContainerHeight,
       width: double.infinity,
       child: Column(
@@ -24,7 +28,7 @@ class Carousel extends StatelessWidget {
               options: CarouselOptions(
                 // autoPlay: true,
                 viewportFraction: 1,
-                scrollPhysics: NeverScrollableScrollPhysics(),
+                scrollPhysics: const NeverScrollableScrollPhysics(),
                 height: carouselContainerHeight,
               ),
               items: List.generate(

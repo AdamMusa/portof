@@ -11,6 +11,8 @@ import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/globals.dart';
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +20,7 @@ class Home extends StatelessWidget {
       endDrawer: Drawer(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 16.0,
               vertical: 24.0,
             ),
@@ -32,12 +34,12 @@ class Home extends StatelessWidget {
                             color: kDangerColor,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          padding: EdgeInsets.symmetric(horizontal: 28.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 28.0),
                           child: TextButton(
                             onPressed: headerItems[index].onTap,
                             child: Text(
                               headerItems[index].title,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 13.0,
                                 fontWeight: FontWeight.bold,
@@ -49,14 +51,14 @@ class Home extends StatelessWidget {
                     : ListTile(
                         title: Text(
                           headerItems[index].title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                           ),
                         ),
                       );
               },
               separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
+                return const SizedBox(
                   height: 10.0,
                 );
               },
@@ -65,37 +67,33 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Header(),
-              ),
-              Carousel(),
-              SizedBox(
-                height: 20.0,
-              ),
-              CvSection(),
-              WebsiteAd(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
-                child: PortfolioStats(),
-              ),
-              SizedBox(
-                height: 50.0,
-              ),
-              SizedBox(
-                height: 50.0,
-              ),
-              SkillSection(),
-              SizedBox(
-                height: 50.0,
-              ),
-              Footer(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Header(),
+            Carousel(),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const CvSection(),
+            const WebsiteAd(),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 28.0),
+              child: PortfolioStats(),
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const SkillSection(),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const Footer(),
+          ],
         ),
       ),
     );
