@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:web_portfolio/pages/home/components/carousel.dart';
-import 'package:web_portfolio/pages/home/components/cv_section.dart';
-import 'package:web_portfolio/pages/home/components/footer.dart';
-import 'package:web_portfolio/pages/home/components/header.dart';
-import 'package:web_portfolio/pages/home/components/portfolio_stats.dart';
-import 'package:web_portfolio/pages/home/components/skill_section.dart';
-import 'package:web_portfolio/pages/home/components/website_ad.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/globals.dart';
+import 'package:porto/pages/home/components/carousel.dart';
+import 'package:porto/pages/home/components/cv_section.dart';
+import 'package:porto/pages/home/components/footer.dart';
+import 'package:porto/pages/home/components/header.dart';
+import 'package:porto/pages/home/components/portfolio_stats.dart';
+import 'package:porto/pages/home/components/skill_section.dart';
+import 'package:porto/pages/home/components/website_ad.dart';
+import 'package:porto/utils/constants.dart';
+import 'package:porto/utils/globals.dart';
 
 class Home extends StatelessWidget {
   @override

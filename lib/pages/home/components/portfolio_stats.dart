@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porto/models/stat.dart';
+import 'package:porto/utils/constants.dart';
+import 'package:porto/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/stat.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<Stat> stats = [
   Stat(count: "+4", text: "Clients"),

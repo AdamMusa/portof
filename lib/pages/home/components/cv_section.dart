@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porto/models/design_process.dart';
+import 'package:porto/utils/constants.dart';
+import 'package:porto/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/design_process.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(

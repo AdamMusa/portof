@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porto/utils/constants.dart';
+import 'package:porto/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/screen_helper.dart';
 
 class WebsiteAd extends StatelessWidget {
   // We can use same idea as ios_app_ad.dart and swap children order, let's copy code

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porto/models/header_item.dart';
+import 'package:porto/utils/constants.dart';
+import 'package:porto/utils/globals.dart';
+import 'package:porto/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/header_item.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/globals.dart';
-import 'package:web_portfolio/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(
@@ -149,7 +149,7 @@ class Header extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 // Lets open drawer using global key
-                Globals.scaffoldKey.currentState.openEndDrawer();
+                Globals.scaffoldKey.currentState!.openEndDrawer();
               },
               child: Icon(
                 FlutterIcons.menu_fea,
