@@ -20,7 +20,6 @@ List<HeaderItem> headerItems = [
   HeaderItem(title: "MY INTRO", onTap: () {}),
   HeaderItem(title: "SERVICES", onTap: () {}),
   HeaderItem(title: "PORTFOLIO", onTap: () {}),
-  HeaderItem(title: "TESTIMONIALS", onTap: () {}),
   HeaderItem(
       title: "BLOGS",
       onTap: () async {
