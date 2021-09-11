@@ -166,7 +166,7 @@ class Header extends StatelessWidget {
               },
               child: const Icon(
                 FlutterIcons.menu_fea,
-                color: Colors.white,
+                color: Colors.black54,
                 size: 28.0,
               ),
             )

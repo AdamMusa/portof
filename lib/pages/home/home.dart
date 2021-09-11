@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                         title: Text(
                           headerItems[index].title,
                           style: const TextStyle(
-                            color: Colors.white,
+                            color: Colors.grey,
                           ),
                         ),
                       );
