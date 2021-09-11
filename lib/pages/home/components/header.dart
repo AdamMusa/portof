@@ -8,9 +8,9 @@ import 'package:porto/models/header_item.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/globals.dart';
 import 'package:porto/utils/screen_helper.dart';
-import 'package:porto/utils/url.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(
@@ -21,7 +21,13 @@ List<HeaderItem> headerItems = [
   HeaderItem(title: "SERVICES", onTap: () {}),
   HeaderItem(title: "PORTFOLIO", onTap: () {}),
   HeaderItem(title: "TESTIMONIALS", onTap: () {}),
-  HeaderItem(title: "BLOGS", onTap: () => launchURL("thecodebrute.com")),
+  HeaderItem(
+      title: "BLOGS",
+      onTap: () async {
+        await canLaunch("thecodebrute.com")
+            ? await launch("thecodebrute.com")
+            : throw 'Could not launch ';
+      }),
   HeaderItem(
     title: "HIRE ME",
     onTap: () {},
