@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
 import 'package:porto/models/design_process.dart';
@@ -12,26 +13,22 @@ final List<DesignProcess> designProcesses = [
   DesignProcess(
     title: "DESIGN",
     imagePath: "assets/design.png",
-    subtitle:
-        "A full stack allround designer thay may or may not include a guide for specific creative",
+    subtitle: "Me and my team ,We are there for you",
   ),
   DesignProcess(
     title: "DEVELOP",
     imagePath: "assets/develop.png",
-    subtitle:
-        "A full stack allround developer thay may or may not include a guide for specific creative",
+    subtitle: "We can develop everything like you want",
   ),
   DesignProcess(
     title: "WRITE",
     imagePath: "assets/write.png",
-    subtitle:
-        "A full stack allround writer thay may or may not include a guide for specific creative",
+    subtitle: "",
   ),
   DesignProcess(
     title: "PROMOTE",
     imagePath: "assets/promote.png",
-    subtitle:
-        "A full stack allround promoter thay may or may not include a guide for specific creative",
+    subtitle: "",
   ),
 ];
 
@@ -128,7 +125,7 @@ class CvSection extends StatelessWidget {
                             style: GoogleFonts.oswald(
                               fontSize: 20.0,
                               fontWeight: FontWeight.w700,
-                              color: Colors.white,
+                              color: Colors.black54,
                             ),
                           )
                         ],

@@ -9,52 +9,52 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart",
-    percentage: 65,
-  ),
-  Skill(
-    skill: "Flutter",
-    percentage: 70,
-  ),
-  Skill(
-    skill: "Javascript",
-    percentage: 50,
-  ),
-  Skill(
-    skill: "VueJS",
-    percentage: 58,
-  ),
-  Skill(
-    skill: "NuxtJS",
-    percentage: 67,
-  ),
-  Skill(
-    skill: "Vuetify",
-    percentage: 73,
+    skill: "Jekyll",
+    percentage: 93,
   ),
   Skill(
     skill: "Python",
     percentage: 91,
   ),
   Skill(
-    skill: "Django",
-    percentage: 83,
-  ),
-  Skill(
-    skill: "FastAPI",
-    percentage: 76,
-  ),
-  Skill(
     skill: "Ruby",
     percentage: 90,
+  ),
+  Skill(
+    skill: "Django",
+    percentage: 83,
   ),
   Skill(
     skill: "Ruby On Rails",
     percentage: 82,
   ),
   Skill(
-    skill: "Jekyll",
-    percentage: 93,
+    skill: "FastAPI",
+    percentage: 76,
+  ),
+  Skill(
+    skill: "Flutter",
+    percentage: 73,
+  ),
+  Skill(
+    skill: "Vuetify",
+    percentage: 73,
+  ),
+  Skill(
+    skill: "NuxtJS",
+    percentage: 67,
+  ),
+  Skill(
+    skill: "Dart",
+    percentage: 65,
+  ),
+  Skill(
+    skill: "VueJS",
+    percentage: 58,
+  ),
+  Skill(
+    skill: "Javascript",
+    percentage: 50,
   ),
 ];
 

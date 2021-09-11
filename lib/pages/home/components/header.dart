@@ -8,6 +8,7 @@ import 'package:porto/models/header_item.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/globals.dart';
 import 'package:porto/utils/screen_helper.dart';
+import 'package:porto/utils/url.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -20,7 +21,7 @@ List<HeaderItem> headerItems = [
   HeaderItem(title: "SERVICES", onTap: () {}),
   HeaderItem(title: "PORTFOLIO", onTap: () {}),
   HeaderItem(title: "TESTIMONIALS", onTap: () {}),
-  HeaderItem(title: "BLOGS", onTap: () {}),
+  HeaderItem(title: "BLOGS", onTap: () => launchURL("thecodebrute.com")),
   HeaderItem(
     title: "HIRE ME",
     onTap: () {},
@@ -43,7 +44,7 @@ class HeaderLogo extends StatelessWidget {
               TextSpan(
                 text: "AMA",
                 style: GoogleFonts.oswald(
-                  color: Colors.white,
+                  color: Colors.green,
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -110,7 +111,7 @@ class HeaderRow extends StatelessWidget {
                           child: Text(
                             item.title,
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: Colors.black54,
                               fontSize: 13.0,
                               fontWeight: FontWeight.bold,
                             ),
