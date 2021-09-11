@@ -53,7 +53,7 @@ class WebsiteAd extends StatelessWidget {
                       Text(
                         "A team of young \npassionate people",
                         style: GoogleFonts.oswald(
-                          color: Colors.white,
+                          color: Colors.black54,
                           fontWeight: FontWeight.w900,
                           height: 1.3,
                           fontSize: 35.0,
