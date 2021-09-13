@@ -49,6 +49,14 @@ class FindMe extends StatelessWidget {
                 )),
             IconButton(
                 onPressed: () {
+                  link("https://stackoverflow.com/users/11211473/adam-musa");
+                },
+                icon: const Icon(
+                  Icons.code,
+                  color: Colors.blue,
+                )),
+            IconButton(
+                onPressed: () {
                   link(Uri.encodeFull(
                       'mailto:adammusa2222@gmail.com?subject=News&body= Hi Adam'));
                 },
