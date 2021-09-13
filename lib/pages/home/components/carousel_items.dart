@@ -37,7 +37,7 @@ List<CarouselItemModel> carouselItems = List.generate(
           height: 10.0,
         ),
         const Text(
-          "Full-stack developer, based in Barcelona",
+          "Full-stack developer, based in N'djamena",
           style: TextStyle(
             color: kCaptionColor,
             fontSize: 15.0,

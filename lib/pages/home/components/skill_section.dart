@@ -101,7 +101,7 @@ class SkillSection extends StatelessWidget {
                       Text(
                         "SKILLS",
                         style: GoogleFonts.oswald(
-                          color: Colors.grey,
+                          color: kPrimaryColor,
                           fontWeight: FontWeight.w900,
                           fontSize: 28.0,
                           height: 1.3,

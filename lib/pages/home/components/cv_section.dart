@@ -62,7 +62,7 @@ class CvSection extends StatelessWidget {
               Text(
                 "BETTER DESIGN,\nBETTER EXPERIENCES",
                 style: GoogleFonts.oswald(
-                  color: Colors.white,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.w900,
                   height: 1.8,
                   fontSize: 18.0,
