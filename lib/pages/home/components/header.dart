@@ -8,30 +8,37 @@ import 'package:porto/models/header_item.dart';
 import 'package:porto/utils/constants.dart';
 import 'package:porto/utils/globals.dart';
 import 'package:porto/utils/screen_helper.dart';
+import 'package:porto/utils/url.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+ScrollController? slideController;
 
 List<HeaderItem> headerItems = [
   HeaderItem(
     title: "HOME",
     onTap: () {},
   ),
-  HeaderItem(title: "MY INTRO", onTap: () {}),
+  HeaderItem(
+      title: "MY INTRO",
+      onTap: () {
+        slideController!.animateTo(
+          slideController!.position.pixels - 500, // move slider to left
+          duration: const Duration(
+            seconds: 1,
+          ),
+          curve: Curves.ease,
+        );
+      }),
   HeaderItem(title: "SERVICES", onTap: () {}),
   HeaderItem(title: "PORTFOLIO", onTap: () {}),
   HeaderItem(
       title: "BLOGS",
+      isButton: true,
       onTap: () async {
-        await canLaunch("thecodebrute.com")
-            ? await launch("thecodebrute.com")
-            : throw 'Could not launch ';
+        link("https://www.thecodebrute.com");
       }),
-  HeaderItem(
-    title: "HIRE ME",
-    onTap: () {},
-    isButton: true,
-  ),
 ];
 
 class HeaderLogo extends StatelessWidget {

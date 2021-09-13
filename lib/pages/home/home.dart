@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:porto/pages/home/components/carousel.dart';
 import 'package:porto/pages/home/components/cv_section.dart';
+import 'package:porto/pages/home/components/findme.dart';
 import 'package:porto/pages/home/components/footer.dart';
 import 'package:porto/pages/home/components/header.dart';
 import 'package:porto/pages/home/components/portfolio_stats.dart';
@@ -85,6 +86,10 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 50.0,
             ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const FindMe(),
             const SizedBox(
               height: 50.0,
             ),
