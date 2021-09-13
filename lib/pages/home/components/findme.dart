@@ -47,14 +47,22 @@ class FindMe extends StatelessWidget {
                   AntDesign.linkedin_square,
                   color: Colors.blue,
                 )),
-            IconButton(
-                onPressed: () {
-                  link("https://stackoverflow.com/users/11211473/adam-musa");
-                },
-                icon: const Icon(
-                  Icons.code,
-                  color: Colors.blue,
-                )),
+            InkWell(
+              focusColor: Colors.white,
+              hoverColor: Colors.white,
+              onTap: () async {
+                link("https://stackoverflow.com/users/11211473/adam-musa");
+              },
+              child: Row(
+                children: const <Widget>[
+                  Text("Stackoverflow"),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Icon(Icons.code)
+                ],
+              ),
+            ),
             IconButton(
                 onPressed: () {
                   link(Uri.encodeFull(
